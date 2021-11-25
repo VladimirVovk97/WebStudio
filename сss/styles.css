@@ -1,0 +1,30 @@
+:root {
+  --main-font: "Roboto", sans-serif;
+  --accent-font: "Raleway", sans-serif;
+  --accent-color: #2196f3;
+  --background-color: #ffffff;
+  --primary-text-color: #212121;
+  --second-text-color: #757575;
+  --third-text-color: #ffffff;
+  --footer-color: rgba(255, 255, 255, 0.6);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+  /* margin-top: 0px; 
+     margin-bottom: 0px; 
+ */
+}
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: var(--main-font);
+  background-color: var(--background-color);
+}
