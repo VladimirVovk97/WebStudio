@@ -1,7 +1,7 @@
 /* Css переменные */
 :root {
-  --main-font: "Roboto", sans-serif;
-  --accent-font: "Raleway", sans-serif;
+  --main-font: Roboto, sans-serif;
+  --accent-font: Raleway, sans-serif;
   --accent-color: #2196f3;
   --background-color: #ffffff;
   --second-bg-color: #2f303a;
@@ -35,6 +35,28 @@ body {
   display: none;
 }
 
+/* Container */
+.container {
+  width: 1200px;
+}
+
+/* Sections */
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+/* Хедер сайта */
+.header {
+  display: flex;
+  height: 80px;
+}
+.header .container {
+  display: flex;
+  text-align: center;
+}
+
 /* Стили для логотипа*/
 .logo {
   color: var(--primary-text-color);
@@ -44,6 +66,8 @@ body {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  margin-right: auto;
+  margin-left: auto;
 }
 .web-logo {
   color: var(--accent-color);
@@ -51,7 +75,6 @@ body {
 .studio-logo {
   color: var(--third-text-color);
 }
-/* Стили для логотипа*/
 
 /* Стили для ссылок*/
 
@@ -86,8 +109,6 @@ body {
   color: var(--accent-color);
 }
 
-/* Стили для ссылок*/
-
 /* Стили для кнопок*/
 .main-button {
   cursor: pointer;
@@ -103,7 +124,6 @@ body {
   color: var(--accent-color);
   cursor: pointer;
 }
-/* Стили для кнопок*/
 
 /* Стилизация текста */
 .persons {
@@ -140,9 +160,8 @@ body {
   letter-spacing: 0.03em;
   font-weight: normal;
 }
-/* Стилизация текста */
 
-/*footer  */
+/*footer*/
 
 .footer {
   background-color: var(--footer-bg-color);
