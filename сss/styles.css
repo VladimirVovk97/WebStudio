@@ -15,15 +15,13 @@
   --second-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   --border-cards-color: #eeeeee;
 }
-/* Css переменные */
 
-html {
-  box-sizing: border-box;
-}
+/* Глобальные стили*/
+
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 h1,
 h2,
