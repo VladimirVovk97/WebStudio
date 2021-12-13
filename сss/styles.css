@@ -14,23 +14,25 @@
   --box-shawow: 0px 4px 4px rgb(0 0 0 / 25%);
   --second-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   --border-cards-color: #eeeeee;
+  --card-gap: 30px;
 }
 
 /* Глобальные стили*/
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   margin-top: 0px;
   margin-bottom: 0px;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 ul {
   list-style: none;
@@ -39,10 +41,6 @@ ul {
 }
 a {
   display: block;
-}
-p {
-  margin-top: 0px;
-  margin-bottom: 0px;
 }
 body {
   color: var(--primary-text-color);
@@ -56,10 +54,10 @@ body {
 /* Container */
 .container {
   width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Хедер сайта */
@@ -81,11 +79,11 @@ body {
   display: flex;
   align-items: center;
 }
-.nav-list {
+.site-nav {
   display: flex;
   margin-left: 94px;
 }
-.nav-list .item + .item {
+.site-nav .item + .item {
   margin-left: 50px;
 }
 .auth-nav {
@@ -95,6 +93,7 @@ body {
 .auth-nav .item + .item {
   margin-left: 50px;
 }
+
 /* Стили для логотипа*/
 .logo {
   color: var(--primary-text-color);
@@ -115,6 +114,10 @@ body {
 /* Стили для ссылок*/
 
 .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--primary-text-color);
   text-decoration: none;
   font-weight: 500;
@@ -122,17 +125,27 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
+
 .link:hover,
 .link:focus,
 .link-active {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--accent-color);
-  text-decoration: none;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  text-decoration: none;
 }
+
 .second-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--second-text-color);
   text-decoration: none;
   cursor: pointer;
@@ -144,31 +157,30 @@ body {
 .second-link:focus {
   color: var(--accent-color);
 }
+
 /* Sections */
 
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .section-features {
   padding-top: 0;
 }
+.section-team {
+  background-color: var(--third-bg-color);
+}
 
 /*Section Hero */
-.hero {
+.section-hero {
   padding-top: 200px;
   padding-bottom: 200px;
   background-color: var(--second-bg-color);
   text-align: center;
 }
-.team-title {
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
-  margin-bottom: 50px;
-}
+
 /*title hero */
 .hero-title {
   color: var(--third-text-color);
@@ -180,8 +192,9 @@ body {
   text-transform: uppercase;
   margin-bottom: 30px;
 }
-/* Feature title  */
-.feature-title {
+
+/*  title  */
+.title {
   font-weight: bold;
   font-size: 36px;
   line-height: 1.16;
@@ -189,6 +202,7 @@ body {
   letter-spacing: 0.03em;
   margin-bottom: 50px;
 }
+
 /* Стили для кнопок*/
 .main-button {
   cursor: pointer;
@@ -232,6 +246,7 @@ body {
 .select-button + .select-button {
   margin-left: 8px;
 }
+
 /* Стилизация текста */
 .persons {
   font-size: 16px;
@@ -263,6 +278,7 @@ body {
   font-weight: normal;
   margin-top: 4px;
 }
+
 /* Feature list */
 .feature-list {
   display: flex;
@@ -285,7 +301,9 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 10px;
+  text-align: start;
 }
+
 /* Activity*/
 .activity {
   display: flex;
@@ -293,6 +311,12 @@ body {
 .activity .item + .item {
   margin-left: 30px;
 }
+.activity .item {
+  border-radius: 10px;
+  box-shadow: var(--box-shawow);
+  overflow: hidden;
+}
+
 /*Team list */
 .team {
   display: flex;
@@ -308,29 +332,31 @@ body {
 }
 .card {
   background: var(--background-color);
-  border-radius: 0px 0px 4px 4px;
+  border-radius: 10px;
   box-shadow: var(--box-shawow);
+  overflow: hidden;
 }
 
 /*gallery  */
+
 .gallery {
-  width: 1200px;
   display: flex;
   flex-wrap: wrap;
-  padding-left: 0px;
+  margin-bottom: calc(-1 * var(--card-gap));
+  margin-left: calc(-1 * var(--card-gap));
 }
 .cards {
   background: var(--background-color);
-  border: 1px solid var(--border-cards-color);
   box-sizing: border-box;
-  margin-right: 27px;
-  margin-bottom: 30px;
+  flex-basis: calc(100% / 3 - var(--card-gap));
+  margin-left: var(--card-gap);
+  margin-bottom: var(--card-gap);
 }
+
 .information {
-  padding-left: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  padding: 20px 24px;
 }
+
 /*footer*/
 
 .footer {
@@ -363,6 +389,7 @@ body {
   letter-spacing: 0.03em;
   font-style: normal;
   margin-top: 9px;
+  text-decoration: none;
 }
 .adr-link:hover,
 .adr-link:focus {
