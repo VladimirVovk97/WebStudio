@@ -804,50 +804,19 @@ body {
 }
 
 .form-field {
-  margin-bottom: 10px;
+  position: relative;
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
 }
 
-.form-field input {
-  width: 100%;
-  margin: 0;
-  padding: 0;
+.form-input {
   border: 1px solid rgba(33, 33, 33, 0.2);
-  box-sizing: border-box;
   border-radius: 4px;
-  padding: 11px 12px;
+  padding: 11px 42px;
 }
 
-.action-name {
-  margin-bottom: 4px;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
-
-  color: var(--second-text-color);
-}
-.action-tel {
-  margin-bottom: 4px;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
-
-  color: var(--second-text-color);
-}
-.action-mail {
-  margin-bottom: 4px;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
-
-  color: var(--second-text-color);
-}
-
-.action-comment {
+.form-label {
   margin-bottom: 4px;
   font-weight: normal;
   font-size: 12px;
@@ -925,4 +894,11 @@ body {
   letter-spacing: 0.03em;
   text-decoration-line: underline;
   color: var(--accent-color);
+}
+
+.form-icon {
+  position: absolute;
+  top: 30px;
+  left: 12px;
+  fill: #212121;
 }
