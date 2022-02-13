@@ -13,7 +13,6 @@
   --footer-bg-color: #2f303a;
   --footer-link-bg-color: #43444d;
   --footer-color: rgba(255, 255, 255, 0.6);
-  --box-shawow: 0px 4px 4px rgb(0 0 0 / 25%);
   --second-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   --border-cards-color: #eeeeee;
   --border-close-button: rgba(0, 0, 0, 0.1);
@@ -33,6 +32,7 @@ h6 {
   margin-top: 0px;
   margin-bottom: 0px;
 }
+
 p {
   margin-top: 0px;
   margin-bottom: 0px;
@@ -392,7 +392,7 @@ body {
 
 .activity .item {
   border-radius: 10px;
-  box-shadow: var(--box-shawow);
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
   overflow: hidden;
 }
 
@@ -408,7 +408,7 @@ body {
 .team .card {
   background: var(--background-color);
   border-radius: 10px;
-  box-shadow: var(--box-shawow);
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
   overflow: hidden;
 }
 
@@ -603,6 +603,7 @@ body {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+
 /*Footer*/
 
 .footer {
@@ -660,6 +661,14 @@ body {
   margin-left: 70px;
 }
 
+.third-footer-part {
+  margin-left: 93px;
+}
+
+.form-footer {
+  display: flex;
+}
+
 .footer-heading {
   font-weight: bold;
   font-size: 14px;
@@ -670,6 +679,30 @@ body {
   color: var(--third-text-color);
 }
 
+.subscribe-heading {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+  color: var(--third-text-color);
+}
+
+.subscribe-field {
+  display: flex;
+}
+
+.form-input-subscribe {
+  margin-right: 12px;
+  padding: 15px 16px;
+  width: 358px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+  box-shadow: 0px 4px 4px 0px rgb(0 0 0 / 15%);
+}
 .social-links {
   display: flex;
 }
@@ -752,9 +785,9 @@ body {
   right: 8px;
   width: 30px;
   height: 30px;
-  border: 1px solid #e6e6e6;
+  border: 1px solid var(--border-close-button);
   border-radius: 50%;
-  background-color: white;
+  background-color: var(--background-color);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -771,6 +804,19 @@ body {
   transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-button:focus,
+.modal-close-button:hover {
+  cursor: pointer;
+  color: var(--accent-color);
+}
+.modal-close-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.1em var(--accent-color);
+}
+.close {
+  fill: currentColor;
 }
 
 .icon-close {
@@ -810,6 +856,10 @@ body {
   margin-bottom: 10px;
 }
 
+.field--comment {
+  margin-bottom: 20px;
+}
+
 .form-input {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -831,9 +881,7 @@ body {
   height: 120px;
   padding: 12px 16px;
   resize: none;
-  border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
-  border-radius: 4px;
 }
 
 .submit-button {
@@ -875,16 +923,11 @@ body {
 .form-check {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-bottom: 30px;
-}
-.form-check input[type="checkbox"] {
-  margin-left: 12px;
-}
 
-.checkbox-text {
   font-size: 14px;
-  line-height: 24px;
-  margin-left: 8.38px;
+  line-height: 1.71;
   letter-spacing: 0.03em;
 
   color: var(--second-text-color);
@@ -894,6 +937,10 @@ body {
   letter-spacing: 0.03em;
   text-decoration-line: underline;
   color: var(--accent-color);
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  margin-left: 6px;
 }
 
 .form-icon {
@@ -901,4 +948,47 @@ body {
   top: 30px;
   left: 12px;
   fill: #212121;
+}
+
+.checkbox {
+  position: absolute;
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox:checked + .icon-check {
+  background-color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+  background-image: url(../images/Svg/check.svg);
+  background-size: contain;
+  background-origin: border-box;
+  fill: transparent;
+  border-color: transparent;
+}
+
+.icon-check {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-right: 7px;
+  border: 2px solid black;
+}
+
+.form-field:hover > .form-icon,
+.form-field:focus-within > .form-icon {
+  fill: var(--accent-color);
+  cursor: pointer;
+}
+.form-field:hover > .form-input,
+.form-field:focus-within > .form-input {
+  cursor: pointer;
+  outline: none;
+  border: 1px solid var(--accent-color);
 }

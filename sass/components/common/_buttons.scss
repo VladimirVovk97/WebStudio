@@ -1,0 +1,55 @@
+/* Стили для кнопок*/
+.main-button {
+  width: 200px;
+  padding: 10px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.06em;
+
+  color: $third-text-color;
+  background-color: $accent-color;
+  box-shadow: $second-box-shadow;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.filter-button {
+  height: 38px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  padding-left: 22px;
+  padding-right: 22px;
+
+  color: $primary-text-color;
+  background-color: $third-bg-color;
+  border: 1px solid $third-bg-color;
+  border-radius: 4px;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition: background-color $timing-function, color 500ms $timing-function;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  color: $third-text-color;
+  background-color: $accent-color;
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.select-button + .select-button {
+  margin-left: 8px;
+}

@@ -1,0 +1,40 @@
+/* Feature list */
+.feature-list {
+  display: flex;
+}
+
+.feature-list .list + .list {
+  margin-left: 30px;
+}
+
+.feature-list .text {
+  color: $second-text-color;
+  font-size: 14px;
+  line-height: 1.71;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+
+.feature-list .title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: start;
+  margin-bottom: 10px;
+}
+
+.adv-icons {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  background-position: center;
+  background-color: $third-bg-color;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  fill: currentColor;
+}
