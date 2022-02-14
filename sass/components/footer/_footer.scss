@@ -5,11 +5,7 @@
   padding: 60px 0;
 }
 
-.address-list {
-  margin-top: 20px;
-}
-
-.adr {
+.contact-list__text {
   font-style: normal;
   font-size: 14px;
   line-height: 1.7;
@@ -20,50 +16,50 @@
 
   transition-duration: 250ms;
   transition-timing-function: $timing-function;
-}
-.adr:hover,
-.adr:focus {
-  color: $accent-color;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
 
-.adr-link {
+.contact-list__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.contact-list-link {
   display: inline-block;
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   font-style: normal;
-  margin-top: 9px;
   text-decoration: none;
   color: $footer-color;
 
   transition-duration: 250ms;
   transition-timing-function: $timing-function;
-}
 
-.adr-link:hover,
-.adr-link:focus {
-  color: $accent-color;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
-
 .footer-parts {
   display: flex;
   align-items: baseline;
 }
 
-.second-footer-part {
+.main-contacts {
+  width: 231px;
+}
+
+.social-networks-contacts {
+  width: 206px;
   margin-left: 70px;
 }
 
-.third__footer-part {
-  margin-left: 93px;
-}
-
-.form-footer {
-  display: flex;
-}
-
-.footer-heading {
+.call {
   font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
@@ -71,6 +67,14 @@
   text-transform: uppercase;
   margin-bottom: 20px;
   color: $third-text-color;
+}
+
+.subscribe-form {
+  margin-left: 93px;
+}
+
+.form-footer {
+  display: flex;
 }
 
 .third__footer-heading {
@@ -84,20 +88,20 @@
   color: $third-text-color;
 }
 
-.form__subscribe-field {
+.subscribe-field {
   display: flex;
 }
 
-.form__subscribe-input {
+.subscribe-field__form-input {
   margin-right: 12px;
   padding: 15px 16px;
   width: 358px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   background-color: transparent;
-  filter: drop-shadow(0px 4px 4px 0px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
-.form__subscribe-button {
+.subscribe-field__form-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -117,19 +121,16 @@
   cursor: pointer;
 }
 
-.form__subscribe-icon {
+.subscribe-field__form-icon {
   display: flex;
   align-items: center;
   margin-left: 10px;
   fill: $third-text-color;
 }
 
-.social-links {
+.social-list {
   display: flex;
-}
-
-.social-links li:not(:last-child) {
-  margin-right: 10px;
+  justify-content: space-between;
 }
 
 .footer-button {

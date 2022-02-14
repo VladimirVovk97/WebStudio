@@ -1,4 +1,4 @@
-.logo {
+.logo__part--black {
   color: $primary-text-color;
   font-family: $accent-font;
   text-decoration: none;
@@ -8,12 +8,19 @@
   letter-spacing: 0.03em;
 }
 
-.web-logo {
+.logo__part--accent {
   color: $accent-color;
 }
 
-.studio-logo {
+.logo__part--white {
   color: $third-text-color;
+  font-family: $accent-font;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  margin-bottom: 20px;
 }
 
 /* Стили для ссылок*/

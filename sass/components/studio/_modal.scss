@@ -30,7 +30,6 @@
   left: 50%;
 
   display: flex;
-  display: webkit-box;
   justify-content: flex-end;
   align-items: flex-start;
 
@@ -40,7 +39,7 @@
   transition: transform 250ms $timing-function;
 }
 
-.modal-close-button {
+.modal__close-button {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -58,22 +57,17 @@
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.modal-close-button:focus,
-.modal-close-button:hover {
-  cursor: pointer;
-  color: $accent-color;
+  &:focus,
+  &:hover {
+    cursor: pointer;
+    color: $accent-color;
+  }
 }
-.modal-close-button:focus {
+.modal__close-button:focus {
   outline: none;
   box-shadow: 0 0 0 0.1em $accent-color;
 }
-.close {
+.modal__close-button--cross {
   fill: currentColor;
-}
-
-.icon-close {
-  position: absolute;
-  transform: translate(-50%, -50%);
 }
