@@ -22,32 +22,3 @@
   letter-spacing: 0.03em;
   margin-bottom: 20px;
 }
-
-/* Стили для ссылок*/
-
-.second-link {
-  display: inline-flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  color: $second-text-color;
-  text-decoration: none;
-  cursor: pointer;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  align-items: center;
-
-  transition-duration: 250ms;
-  transition-timing-function: $timing-function;
-}
-
-.second-link:hover,
-.second-link:focus {
-  color: $accent-color;
-}
-
-.button-icons {
-  display: block;
-  margin-right: 10px;
-  fill: currentColor;
-}
