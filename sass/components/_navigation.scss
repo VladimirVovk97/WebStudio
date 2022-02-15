@@ -1,24 +1,79 @@
 /* Навигация сайта  */
 
-.main-nav {
-  display: flex;
-  align-items: center;
-}
-
 .site-nav {
   display: flex;
-  margin-left: 94px;
+  margin-left: 93px;
+  &__item {
+    position: relative;
+  }
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+  &__link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus,
+    &--active {
+      color: $accent-color;
+    }
+    &--active::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      margin-bottom: -1px;
+
+      display: block;
+      width: 100%;
+      height: 4px;
+
+      border-radius: 2px;
+      background-color: $accent-color;
+    }
+  }
 }
 
-.site-nav .item + .item {
-  margin-left: 50px;
-}
+/* Auth nav */
 
 .auth-nav {
   display: flex;
   margin-left: auto;
+
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  .auth-nav__link {
+    display: inline-flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: $second-text-color;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    align-items: center;
+
+    transition-duration: 250ms;
+    transition-timing-function: $timing-function;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
 }
 
-.auth-nav .item + .item {
-  margin-left: 50px;
+.auth-nav__icon {
+  display: block;
+  margin-right: 10px;
+  fill: currentColor;
 }

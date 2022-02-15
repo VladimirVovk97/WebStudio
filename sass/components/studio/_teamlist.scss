@@ -1,27 +1,27 @@
 /*Team list */
-.team {
+.team-list {
   display: flex;
 }
 
-.team .card + .card {
-  margin-left: 30px;
+.teal-list__card:not(:last-child) {
+  margin-right: 30px;
 }
 
-.team .card {
+.teal-list__card {
   background: $background-color;
   border-radius: 10px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   overflow: hidden;
 }
 
-.info {
+.info-card {
   padding-top: 30px;
   padding-bottom: 30px;
   border-top: 0px;
   text-align: center;
 }
 
-.persons {
+.info-card__title {
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
@@ -29,7 +29,7 @@
   /* text-align: center; */
 }
 
-.job {
+.info-card__text {
   color: $second-text-color;
   font-size: 16px;
   line-height: 1.19;
@@ -39,7 +39,7 @@
   margin-bottom: 0;
 }
 
-.actions {
+.info-card__list {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,10 +47,10 @@
   margin-top: 16px;
 }
 
-.actions li:not(:last-child) {
+.info-card__item:not(:last-child) {
   margin-right: 10px;
 }
-.button-spr {
+.info-card__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,14 +61,16 @@
 
   transition-duration: 250ms;
   transition-timing-function: $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $third-text-color;
+    background: $accent-color;
+  }
 }
-.button-icon {
+
+.info-card__icon {
   width: 20px;
   height: 20px;
   fill: currentColor;
-}
-.button-spr:hover,
-.button-spr:focus {
-  color: $third-text-color;
-  background: $accent-color;
 }

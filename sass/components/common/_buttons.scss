@@ -16,7 +16,9 @@
   cursor: pointer;
 }
 
-.filter-button {
+
+
+.filter-list__button {
   height: 38px;
   font-weight: 500;
   font-size: 16px;
@@ -35,21 +37,11 @@
   transition-property: background-color;
   transition-duration: 250ms;
   transition: background-color $timing-function, color 500ms $timing-function;
-}
 
-.filter-button:hover,
-.filter-button:focus {
-  color: $third-text-color;
-  background-color: $accent-color;
-  cursor: pointer;
-}
-
-.buttons {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-
-.select-button + .select-button {
-  margin-left: 8px;
+  &:hover,
+  &:focus {
+    color: $third-text-color;
+    background-color: $accent-color;
+    cursor: pointer;
+  }
 }

@@ -1,56 +1,36 @@
 /*Portfolio Gallery */
 
-.gallery {
+.project-list {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: calc(-1 * 30px);
   margin-left: calc(-1 * 30px);
+
+  &__item {
+    background: $background-color;
+    box-sizing: border-box;
+    flex-basis: calc(100% / 3 - 30px);
+    margin-left: 30px;
+    margin-bottom: 30px;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      background: $third-bg-color;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+  }
 }
 
-.cards {
-  background: $background-color;
-  box-sizing: border-box;
-  flex-basis: calc(100% / 3 - 30px);
-  margin-left: 30px;
-  margin-bottom: 30px;
-}
-
-.cards:hover,
-.cards:focus {
-  cursor: pointer;
-  background: $third-bg-color;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.card {
+.project-list__card {
   background: $background-color;
   border: 1px solid $border-cards-color;
 }
 
-.information {
-  padding: 20px 24px;
-}
-
-.filters {
-  font-size: 18px;
-  line-height: 2;
-  font-weight: bold;
-  letter-spacing: 0.06em;
-}
-
-.desc {
-  font-size: 16px;
-  line-height: 30px;
-  color: $second-text-color;
-  letter-spacing: 0.03em;
-  font-weight: normal;
-  margin-top: 4px;
-}
-
-.card-thumb {
+.project-list__thumb {
   position: relative;
   overflow: hidden;
 }
@@ -62,33 +42,62 @@
   left: 0;
   width: 100%;
   height: 100%;
+  overflow: auto;
   background: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
   transition: transform 250ms $timing-function, opacity 250ms $timing-function;
+
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    padding: 63px 24px;
+    overflow: auto;
+
+    color: $third-text-color;
+  }
 }
 
-.card-text {
-  font-weight: 400;
+.project-list__information {
+  padding: 20px 24px;
+}
+
+.project-list__title {
   font-size: 18px;
-  line-height: 28px;
-  letter-spacing: 0.03em;
-  padding: 63px 24px;
-  overflow: auto;
-
-  color: $third-text-color;
+  line-height: 2;
+  font-weight: bold;
+  letter-spacing: 0.06em;
 }
 
-.card-link:hover .card-overlay,
-.card-link:focus .card-overlay {
+.project-list__text {
+  font-size: 16px;
+  line-height: 30px;
+  color: $second-text-color;
+  letter-spacing: 0.03em;
+  font-weight: normal;
+  margin-top: 4px;
+}
+
+.project-list__link:hover .card-overlay,
+.project-list__link:focus .card-overlay {
   transform: translateY(0);
   opacity: 1;
 }
 
-.card-link:hover,
-.card-link:focus {
+.project-list__link:hover,
+.project-list__link:focus {
   background-color: $background-color;
-  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
-    0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.filter-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+
+  &__item:not(:last-child) {
+    margin-right: 8px;
+  }
 }
