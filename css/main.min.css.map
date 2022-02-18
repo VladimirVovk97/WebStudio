@@ -21,7 +21,8 @@
         "../sass/components/studio/_clientlist.scss",
         "../sass/components/studio/_modal.scss",
         "../sass/components/studio/_form.scss",
-        "../sass/components/portfolio/_potfolio.scss"
+        "../sass/components/portfolio/_potfolio.scss",
+        "../sass/utils/_breakpoints.scss"
     ],
     "names": [],
     "file": "main.min.css"
