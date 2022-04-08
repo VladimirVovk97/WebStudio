@@ -20,16 +20,19 @@
     max-width: 1600px;
     height: 600px;
   }
-}
 
-.section-activity {
-  padding-top: 0;
-}
+  &-activity {
+    padding-top: 0;
+    @media screen and(max-width: 1199px) {
+      display: none;
+    }
+  }
 
-.section-team {
-  background-color: $third-bg-color;
-}
+  &-team {
+    background-color: $third-bg-color;
+  }
 
-.section-clients {
-  padding: 94px 0px;
+  &-clients {
+    padding: 94px 0px;
+  }
 }

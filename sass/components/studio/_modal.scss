@@ -24,6 +24,7 @@
 
 .modal {
   position: absolute;
+ 
   width: 528px;
   height: 581px;
   top: 50%;
@@ -37,6 +38,11 @@
 
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms $timing-function;
+
+  @media screen and (max-width:1199px){
+    max-width: 450px;
+    max-height: 609px;
+  }
 }
 
 .modal__close-button {
