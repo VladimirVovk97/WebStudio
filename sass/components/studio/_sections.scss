@@ -4,6 +4,17 @@
   margin-right: auto;
 
   &-hero {
+
+    @media screen and(min-width:$tablet) {
+      padding-top: 118px;
+      padding-bottom: 118px;
+      background-color: $second-bg-color;
+      text-align: center;
+      max-width: 768px;
+      height: 400px;
+    }
+
+    @media screen and (min-width:$desktop) {
     padding-top: 200px;
     padding-bottom: 200px;
     background-color: $second-bg-color;
@@ -20,7 +31,7 @@
     max-width: 1600px;
     height: 600px;
   }
-
+  }
   &-activity {
     padding-top: 0;
     @media screen and(max-width: 1199px) {
