@@ -3,6 +3,21 @@
   margin-left: auto;
   margin-right: auto;
 
+  &-feature {
+
+  @media screen and (min-width:$tablet) {
+    padding: 60px 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width:$desktop){
+  padding: 94px 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+  }
+
   &-hero {
 
     @media screen and(min-width:$tablet) {
@@ -30,8 +45,9 @@
     background-size: cover;
     max-width: 1600px;
     height: 600px;
+   }
   }
-  }
+
   &-activity {
     padding-top: 0;
     @media screen and(max-width: 1199px) {
@@ -41,9 +57,19 @@
 
   &-team {
     background-color: $third-bg-color;
+    padding: 60px 0;
+  
+    @media screen and (min-width:$desktop) {
+    background-color: $third-bg-color;
+    padding: 94px 0;
+    }
   }
 
   &-clients {
+   padding: 60px 0px;
+
+    @media screen and(min-width:$desktop){
     padding: 94px 0px;
   }
+   }
 }

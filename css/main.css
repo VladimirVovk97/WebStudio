@@ -82,6 +82,22 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+  .section-feature {
+    padding: 60px 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-feature {
+    padding: 94px 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .section-hero {
     padding-top: 118px;
     padding-bottom: 118px;
@@ -120,10 +136,24 @@ body {
 
 .section-team {
   background-color: #f5f4fa;
+  padding: 60px 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .section-team {
+    background-color: #f5f4fa;
+    padding: 94px 0;
+  }
 }
 
 .section-clients {
-  padding: 94px 0px;
+  padding: 60px 0px;
+}
+
+@media screen and (min-width: 1200px) {
+  .section-clients {
+    padding: 94px 0px;
+  }
 }
 
 .header {
