@@ -1,11 +1,26 @@
 /* Clients List  */
 
 .clients-list {
-  display: flex;
-  justify-content: space-between;
-}
 
-.clients-list__item {
+   margin-bottom: -30px;
+  @media screen and(min-width:$tablet){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+
+    &__item{
+      flex-basis: calc((100% - 90px) / 3);
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and(min-width:$desktop){
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  
+&__item {
   // width: 170px;
   // height: 92px;
   display: flex;
@@ -13,15 +28,19 @@
   align-items: center;
 }
 
-.clients-list__item:not(:last-child) {
+&__item:not(:last-child) {
   margin-right: 30px;
 }
-
-.clients-icon {
+  }
+&__icon {
   fill: currentColor;
 }
 
-.clients-list__link {
+&__link {
+
+  @media screen and (min-width:$tablet) {
+    width: 226px;
+  }
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,4 +58,6 @@
     color: $accent-color;
     border-color: $accent-color;
   }
+  
+}
 }
