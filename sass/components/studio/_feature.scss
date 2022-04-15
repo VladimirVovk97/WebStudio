@@ -1,11 +1,13 @@
 /* Feature list */
 .feature-list {
-  margin-bottom: -30px;
+  padding-left: 0;
+  margin-top: 0;
 
   @media screen and(min-width:$tablet){
     display: flex;
     flex-wrap: wrap;
-    margin-right: -30px;
+    margin-left: -30px;
+    margin-bottom: -30px;
   }
 
   @media screen and (min-width:$desktop) { 
@@ -19,7 +21,8 @@
 
   @media screen and (min-width: $tablet) {
     flex-basis: calc((100% - 60px) / 2);
-    margin-right: 30px;
+    margin-left: 30px;
+    margin-bottom: 30px;
   }
 
   @media screen and (min-width: $desktop) {
