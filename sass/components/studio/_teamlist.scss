@@ -5,7 +5,8 @@
   @media screen and (min-width:$tablet) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center
+    justify-content: center;
+    margin-right: -30px;
   }
 
   @media screen and (min-width:$desktop) {
@@ -18,21 +19,24 @@
 }
 
 &__card {
-
+  margin-bottom: 30px;
+  width: 100%;
   background: $background-color;
   border-radius: 10px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   overflow: hidden;
 
  @media screen and (min-width:$tablet) {
-  margin-bottom: 30px;
- }
+  flex-basis: calc((100% - 60px) / 2);
+  margin-right: 30px;
+}
   
   @media screen and (min-width:$desktop) {
-    margin-bottom: 0;
+    flex-basis: calc((100% - 120px) / 4);
+  }
   }
    }
- }
+ 
 
 .info-card {
   padding-top: 30px;
