@@ -922,7 +922,7 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-right: -30px;
+    margin: -15px;
   }
 }
 
@@ -932,10 +932,6 @@ body {
     display: -ms-flexbox;
     display: flex;
   }
-}
-
-.team-list__card:not(:last-child) {
-  margin-right: 30px;
 }
 
 .team-list__card {
@@ -950,9 +946,8 @@ body {
 
 @media screen and (min-width: 768px) {
   .team-list__card {
-    -ms-flex-preferred-size: calc((100% - 60px) / 2);
-        flex-basis: calc((100% - 60px) / 2);
-    margin-right: 30px;
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
   }
 }
 
