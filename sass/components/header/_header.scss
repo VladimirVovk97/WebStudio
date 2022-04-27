@@ -10,9 +10,12 @@
   display: flex;
   align-items: center;
 
-  @media screen and (max-width: 767px)  {
-    display: none;
-  }
+  // .nav-container {
+  // @media screen and (max-width: 767px)  {
+  //   display: none;
+  // }
+  // }
+
 
   .container {
     display: flex;
@@ -24,3 +27,4 @@
 //   display: flex;
 //   align-items: center;
 // }
+

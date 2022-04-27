@@ -1,0 +1,156 @@
+.menu-button {
+    display: inline-flex;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 2;
+
+    margin-left: auto;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+        fill: $accent-color;
+    }
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.menu-button .close-menu {
+    display: none;
+}
+
+.menu-button.is-open .close-menu {
+    display: block;
+}
+
+.menu-button.is-open .open-menu{
+    display: none;
+}
+
+.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+        /* display: none; */
+        /* position: absolute; */
+        position: fixed;
+
+        /* top: 100%; */
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+
+        transform: translateX(+100%);
+        transition: transform 500ms linear;
+
+        padding: 48px 40px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        text-align: left;
+        background-color: white;
+
+        /*
+    &.is-open {
+      display: block;
+    }
+  }
+  */
+        &.is-open {
+            transform: translateX(0);
+        }
+    }
+}
+
+.mobile-navigation__item:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+.mobile-navigation__link {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.02em;
+    color: #212121;
+
+    &:focus,
+    &:hover {
+        color: $accent-color;
+    }
+
+    &--active {
+        color: $accent-color;
+    }
+}
+
+.mobile-contact {
+    margin-bottom: 64px;
+}
+
+.mobile-contact__item:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+.mobile-contact__telephone {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+    color: $accent-color;
+}
+
+.mobile-contact__mail {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: $second-text-color;
+}
+
+.mobile-socialmedia {
+    display: flex;
+}
+
+.mobile-socialmedia__item:not(:last-child) {
+    margin-right: 10px;
+
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    padding-right: 10px;
+}
+
+.mobile-socialmedia__link {
+    position: relative;
+
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: $accent-color;
+}
+
