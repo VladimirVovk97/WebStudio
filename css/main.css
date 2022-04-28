@@ -1773,13 +1773,7 @@ footer {
     margin-left: auto;
     margin-right: auto;
     text-align: left;
-    background-color: white;
-    /*
-    &.is-open {
-      display: block;
-    }
-  }
-  */
+    background-color: #ffffff;
   }
   .mobile-menu.is-open {
     -webkit-transform: translateX(0);

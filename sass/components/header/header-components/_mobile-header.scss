@@ -66,14 +66,8 @@
         margin-right: auto;
 
         text-align: left;
-        background-color: white;
+        background-color: $background-color;
 
-        /*
-    &.is-open {
-      display: block;
-    }
-  }
-  */
         &.is-open {
             transform: translateX(0);
         }
